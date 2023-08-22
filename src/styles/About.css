@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h2{
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    
+}
+
+p{
+    margin: 20px 0 10px;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    
+}
+
+.body-about{
+    color: #111;
+}
+
+.section-about{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    margin-top: 5px;
+}
+
+
+
+.titulo-about{
+    position: absolute;
+    text-align: left;
+    left: 250px;
+    top: 230px;
+}
+
+.titulo-about h2{
+    max-width: 100px;
+}
+
+/*REDES SOCIALES*/
+.redes-sociales-about{
+    position: absolute;
+    top: 300px;
+    left: 0;
+    height: 50%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*SERVICIOS*/
+.servicios-about{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+.servicios-about .servicio-about{
+    padding: 30px; 
+}
+
+.servicios-about .servicio-about h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #1b2061;
+}
+
+.servicios-about .servicio-about:hover{
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.1);
+}
+
+.servicios-about .servicio-about .icono-servicio-about img{
+    max-width:100px ;
+}
+
+
+
+

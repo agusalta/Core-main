@@ -1,0 +1,45 @@
+
+.compra-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    max-height: 60vh;
+    color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .compra-container {
+    padding: 2rem;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .titulo-compra {
+    font-size: 30px ;
+    font-weight: 300;
+  }
+  
+  .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 4px; 
+  }
+
+  .boton-compra {
+    color: white !important;
+    background-color: #9c27b0ff !important;
+  }

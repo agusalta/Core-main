@@ -1,0 +1,50 @@
+.carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  width: 400px;
+  padding: 1rem;
+}
+
+.carrito img {
+  margin-bottom: 1rem;
+}
+
+.carrito > * {
+  margin-bottom: 0.5rem;
+}
+
+.carrito::after {
+  content: "";
+  flex: auto;
+}
+
+.carrito button {
+  background-color: #9c30b0ff !important;
+  color: white;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.carrito button:hover {
+  opacity: 0.8;
+}
+
+.titulo {
+  padding-bottom: 0.5rem;
+}
+
+.precio {
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+  padding-bottom: 0.5rem;
+}
+
+.comprar {
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+  margin-bottom: 20px !important;
+  background-color: black !important;
+}

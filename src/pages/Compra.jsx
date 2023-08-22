@@ -1,0 +1,59 @@
+import React from 'react';
+import '../styles/Compra.css';
+import { Button, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup } from '@material-ui/core';
+import { useCart } from '../context/useCart';
+import CartCompra from '../components/Cart/CartCompra';
+
+
+function Compra() {
+  const { cart, handleTotal, handleLength } = useCart(); 
+
+  return (
+    <>
+      <div className='compra-body'>
+        <Grid container spacing={10} className='compra-container'>
+          
+          <Grid item xs={12} md={6}>
+            <h6>
+              ¿Cómo querés recibir o retirar tu compra?
+            </h6>
+            <Button variant="contained" className='boton-compra'>
+              Continuar
+            </Button>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+          <FormControl>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="female"
+              name="radio-buttons-group"
+            >
+              <FormControlLabel value="female" control={<Radio />} label="Envio a domicilio"  />
+              <FormControlLabel value="male" control={<Radio />} label="Domicilio del vendedor" />
+              <FormControlLabel value="other" control={<Radio />} label="Retiro en correo y otros puntos" />
+            </RadioGroup>
+          </FormControl>
+          </Grid>
+        </Grid>
+      </div>
+    
+      <Grid item xs={12} md={6}>
+            <p variant="body1">Cantidad de productos: {handleLength(cart)}</p>
+            <p variant="body1">Precio {handleTotal(cart)} </p>
+      </Grid>
+     
+      <div className='compra-body'>
+        <Grid container spacing={1}>
+          {cart.map((producto) => (
+            <Grid item key={producto.id} xs={12} sm={6} md={4} lg={3}>
+              <CartCompra {...producto} />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+    </>
+  );
+}
+
+export default Compra;

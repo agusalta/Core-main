@@ -1,0 +1,48 @@
+.contenedorDetalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    overflow-y: hidden;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.wrapper {
+    background-color: white;
+    height: 70%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.imgContainer {
+    flex: 1;
+}
+
+.infoContainer {
+    flex: 1;
+    padding: 0px 50px;
+}
+
+.imagen {
+    max-width: 100%;
+    height: max-content;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.condition, .quantity, .warranty {
+    margin: 20px 0px;
+}

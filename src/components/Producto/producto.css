@@ -1,0 +1,81 @@
+
+body {
+    background-color: whitesmoke;
+}
+
+.container {
+    text-align: center;
+    padding-bottom: -5px;
+    background-color: white;
+    color: black;
+    width: 300px;
+    min-height: 600px;
+    height: fit-content;
+    padding: 40px;
+    padding-bottom: 30px;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    padding-bottom: 10px;
+    color: white;
+}
+
+img {
+    max-width: 150px;
+    max-height: 200px;
+}
+
+p {
+    font-size: 17px;
+    padding: 0px;
+}
+
+.titulo {
+    font-size: 16px;
+}
+
+.envio {
+    justify-self: flex-end;
+    align-self: center;
+    font-size: small;
+    color: green;
+    padding: 0px;
+}
+
+.estado {
+    font-size: small;
+    align-self: center;
+    padding: 0px;
+}
+
+.precio {
+    font-weight: 200;
+}
+
+.btn-productos {
+    font-weight: bold  !important;
+    color: white  !important;
+    border: none  !important;
+    padding: 8px 16px  !important;
+    border-radius: 4px !important;
+    transition: background-color 0.3s ease !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+}
+
+.btn-productos:hover {
+    background-color: gray  !important;
+}
+
+.btn-productos:focus {
+    outline: none  !important;
+}
+
+.btn-productos:active {
+    background-color: #ba000d  !important;
+}

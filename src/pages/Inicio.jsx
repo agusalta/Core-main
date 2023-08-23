@@ -5,13 +5,13 @@ import styled from 'styled-components'
 import Productos from './Productos'
 import Footer from '../components/Footer/Footer'
 import Banner from '../assets/banner.mp4'
+import '../styles/Inicio.css'
 
 function Inicio() {
   
   return (
     <>
       <MainContainer>
-        
         <VideoContainer className='VideoContainer'>
           <CustomVideo autoPlay loop muted playsInline>
             <source src={Banner} type="video/mp4" />

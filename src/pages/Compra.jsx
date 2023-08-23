@@ -1,18 +1,47 @@
 import React from 'react';
 import '../styles/Compra.css';
-import { Button, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup } from '@material-ui/core';
+import { Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup } from '@material-ui/core';
 import { useCart } from '../context/useCart';
 import CartCompra from '../components/Cart/CartCompra';
+import { Box, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 
 
 function Compra() {
-  const { cart, handleTotal, handleLength } = useCart(); 
+  const { cart, handleTotal, handleLength, removeOne, handleQuantity, addToCart} = useCart(); 
 
   return (
-    <>
-      <div className='compra-body'>
+    <Box className='compra-container'>
+
+      <TableContainer className='compra-body'>
+        <Table container spacing={3} >
+          {cart.map((producto) => (
+            <TableRow item key={producto.id} xs={12} sm={6} md={4} lg={3}>
+              <TableCell><CartCompra {...producto} /></TableCell>
+              <TableRow><p>Cantidad: {handleQuantity(producto.id)}</p></TableRow>
+              <TableRow><Button onClick={() => addToCart(producto) }>Agregar</Button></TableRow>
+              <TableRow><Button onClick={() => removeOne(producto)}>Eliminar</Button></TableRow>
+            
+            </TableRow>
+          ))}
+
+            <Box className='cantidad-productos'>
+              <TableRow>  
+                <p variant="body1"> <span>Cantidad de productos: </span> {handleLength(cart)}</p>      
+              </TableRow>
+
+              <TableRow>
+                <p variant="body1">{handleTotal(cart)}</p> 
+              </TableRow>
+            </Box>
+
+
+          </Table>
+      </TableContainer>
+
+ 
+
+      <Box className='compra-body'>
         <Grid container spacing={10} className='compra-container'>
-          
           <Grid item xs={12} md={6}>
             <h6>
               ¿Cómo querés recibir o retirar tu compra?
@@ -36,23 +65,9 @@ function Compra() {
           </FormControl>
           </Grid>
         </Grid>
-      </div>
-    
-      <Grid item xs={12} md={6}>
-            <p variant="body1">Cantidad de productos: {handleLength(cart)}</p>
-            <p variant="body1">Precio {handleTotal(cart)} </p>
-      </Grid>
-     
-      <div className='compra-body'>
-        <Grid container spacing={1}>
-          {cart.map((producto) => (
-            <Grid item key={producto.id} xs={12} sm={6} md={4} lg={3}>
-              <CartCompra {...producto} />
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-    </>
+      </Box>
+        
+    </Box>
   );
 }
 
